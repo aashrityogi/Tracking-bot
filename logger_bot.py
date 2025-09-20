@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # --- CONFIG ---
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Set in Render environment
 OWNER_IDS = {int(uid) for uid in os.environ.get("OWNER_IDS", "").split(",") if uid.strip().isdigit()}
 
 # --- DB Setup ---
